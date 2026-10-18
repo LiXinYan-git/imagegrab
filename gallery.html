@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>图提取 · 图片预览</title>
+<link rel="icon" href="icons/icon32.png">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="icons/icon32.png" alt="" width="28" height="28">
+    <div class="brand-text">
+      <h1>图提取 · 图片预览</h1>
+      <p id="pageMeta" class="meta">—</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button id="selectAll" class="ghost" type="button">全选</button>
+    <button id="invert" class="ghost" type="button">反选</button>
+    <button id="clearSel" class="ghost" type="button">清空</button>
+    <span class="count">已选 <b id="selCount">0</b> / <span id="total">0</span></span>
+    <button id="downloadBtn" class="primary" type="button">下载选中</button>
+  </div>
+</header>
+
+<div id="progressWrap" class="progress hidden">
+  <div id="progressBar" class="bar"></div>
+</div>
+<div id="status" class="status"></div>
+
+<main id="grid" class="grid" aria-live="polite"></main>
+
+<div id="empty" class="empty hidden">
+  <div class="empty-icon">🖼️</div>
+  <h2>还没有图片</h2>
+  <p>请在淘宝 / 天猫、京东或拼多多商家版的商品详情页，点击右下角的「获取图片」。</p>
+</div>
+
+<footer class="foot">
+  图片仅在本机处理；下载时统一转为 PNG，文件名为 <code>商品图_001.png</code>（按下载顺序编号）。
+</footer>
+
+<script src="gallery.js"></script>
+</body>
+</html>
